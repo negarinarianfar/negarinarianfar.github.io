@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Negarin Arianfar</title>
+
+<style>
+  :root{
+    --bg:#0b1220;
+    --panel:#0f172a;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --line:#1f2a44;
+    --accent:#38bdf8;
+    --accent2:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 700px at 20% 10%, rgba(56,189,248,0.15), transparent 60%),
+                radial-gradient(900px 600px at 80% 30%, rgba(167,139,250,0.12), transparent 60%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  .container{width:88%; max-width:1050px; margin:0 auto;}
+  nav{
+    display:flex; justify-content:flex-end; gap:18px;
+    padding:22px 0;
+    position:sticky; top:0;
+    background: rgba(11,18,32,0.75);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(31,42,68,0.6);
+    z-index:10;
+  }
+  nav a{
+    color:var(--muted); text-decoration:none; font-size:14px;
+    padding:8px 10px; border-radius:10px;
+  }
+  nav a:hover{color:var(--accent); background:rgba(56,189,248,0.08);}
+  .hero{padding:70px 0 30px;}
+  .kicker{
+    display:inline-flex; gap:10px; align-items:center;
+    font-size:13px; color:var(--muted);
+    border:1px solid rgba(31,42,68,0.8);
+    padding:8px 12px; border-radius:999px;
+    background: rgba(15,23,42,0.65);
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent); box-shadow:0 0 18px rgba(56,189,248,0.6);}
+  h1{font-size:46px; margin:18px 0 10px; letter-spacing:-0.5px;}
+  .subtitle{font-size:18px; color:var(--muted); max-width:780px;}
+  .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:10px 14px; border-radius:14px;
+    text-decoration:none; font-size:14px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(15,23,42,0.75);
+    color:var(--text);
+  }
+  .btn:hover{border-color:rgba(56,189,248,0.6); box-shadow:0 0 0 3px rgba(56,189,248,0.08);}
+  .btn.primary{
+    background: linear-gradient(135deg, rgba(56,189,248,0.22), rgba(167,139,250,0.18));
+    border-color: rgba(56,189,248,0.35);
+  }
+
+  .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:28px;}
+  @media(min-width:900px){
+    .grid{grid-template-columns: 1.2fr 0.8fr;}
+  }
+
+  .card{
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(15,23,42,0.65);
+    border-radius:20px;
+    padding:18px 18px;
+  }
+  .card h3{margin:0 0 10px; font-size:16px; color:var(--accent);}
+  .section{padding:34px 0; border-top:1px solid rgba(31,42,68,0.7);}
+  .section h2{margin:0 0 14px; color:var(--accent); font-size:18px;}
+  .muted{color:var(--muted)}
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .tag{
+    font-size:12px; color:var(--muted);
+    padding:6px 10px; border-radius:999px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(11,18,32,0.35);
+  }
+  .project{
+    padding:16px; border-radius:18px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(11,18,32,0.35);
+    margin-top:12px;
+  }
+  .project-title{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .project-title strong{font-size:15px;}
+  .links a{color:var(--accent); text-decoration:none; font-size:13px; margin-right:12px;}
+  .links a:hover{text-decoration:underline;}
+  ul{margin:10px 0 0 18px; color:var(--muted)}
+  footer{padding:32px 0; text-align:center; color:var(--muted); font-size:13px;}
+</style>
+</head>
+
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#vision">Research Vision</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <header class="hero">
+      <span class="kicker"><span class="dot"></span> Prospective PhD Applicant • Reinforcement Learning</span>
+      <h1>Negar Arianfar</h1>
+      <p class="subtitle">
+        I work on applied reinforcement learning and sequential decision-making —
+        bridging theory to reproducible implementations (PyTorch, custom environments, evaluation).
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/negarinarianfar" target="_blank">GitHub</a>
+        <a class="btn" href="#projects">View Research Projects</a>
+        <a class="btn" href="mailto:negarinarianfar@gmail.com">Email</a>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Research Interests</h3>
+          <p class="muted">
+            Reinforcement Learning • Decision-Making Systems • Reward Design • Safe & Robust Learning • Multi-Agent / Distributed Optimization
+          </p>
+          <div class="tags">
+            <span class="tag">RL</span>
+            <span class="tag">DQN</span>
+            <span class="tag">MDP Modeling</span>
+            <span class="tag">Reward Shaping</span>
+            <span class="tag">Evaluation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Currently Working On</h3>
+          <p class="muted">
+            Rewriting my earlier work in energy-aware optimization into an RL formulation and building an implementable research prototype.
+          </p>
+          <div class="tags">
+            <span class="tag">Working Paper</span>
+            <span class="tag">RL for Optimization</span>
+            <span class="tag">From Theory → Implementation</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p class="muted">
+        I am an applied ML researcher focused on building reinforcement learning systems that can be tested,
+        measured, and extended. I enjoy designing environments, implementing agents, and running structured evaluations
+        to answer research questions with reproducible code.
+      </p>
+    </section>
+
+    <section class="section" id="vision">
+      <h2>Research Vision</h2>
+      <p class="muted">
+        My long-term goal is to develop reinforcement learning methods that support reliable decision-making under constraints.
+        I am especially interested in how environment design, reward structure, and policy learning choices affect stability and performance.
+        I aim to translate research ideas into working prototypes that can be evaluated and scaled.
+      </p>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Research Projects</h2>
+
+      <div class="project">
+        <div class="project-title">
+          <strong>MiniChess-RL: Deep Q-Network Agent in a Custom 4×4 Chess Environment</strong>
+          <span class="links">
+            <a href="https://github.com/negarinarianfar/mini-chess-rl" target="_blank">Code</a>
+          </span>
+        </div>
+        <p class="muted">
+          Built a custom 4×4 mini-chess environment and trained a DQN agent end-to-end using Python + PyTorch.
+          The project demonstrates environment modeling, reward shaping, illegal move masking, training loops, and evaluation.
+        </p>
+        <ul>
+          <li>Custom Gym-style environment with full MDP formalization</li>
+          <li>State encoding: 4-channel tensor (WK, WR, BK, turn); action space: 256 (from×to)</li>
+          <li>DQN with replay buffer, target network, epsilon-greedy exploration</li>
+          <li>Evaluation pipeline and reward-curve visualization</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">DQN</span>
+          <span class="tag">Environment Design</span>
+          <span class="tag">Illegal Action Masking</span>
+          <span class="tag">Evaluation</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <strong>Working Paper: RL Formulation of Energy-Aware Optimization (in progress)</strong>
+          <span class="muted">— details coming soon</span>
+        </div>
+        <p class="muted">
+          Translating an earlier energy optimization / clustering idea into an RL problem definition (state/action/reward),
+          and planning reproducible experiments and baselines.
+        </p>
+        <div class="tags">
+          <span class="tag">MDP Formulation</span>
+          <span class="tag">Baselines</span>
+          <span class="tag">Experiment Design</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cv">
+      <h2>CV</h2>
+      <p class="muted">
+        Add your academic CV PDF here (recommended). Once uploaded to the repository, link it below.
+      </p>
+      <p class="muted">
+        Example: <span style="color:var(--accent)">/assets/Negar-Arianfar-CV.pdf</span>
+      </p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="muted">
+        Email: <a href="mailto:negarinarianfar@gmail.com" style="color:var(--accent);text-decoration:none;">negarinarianfar@gmail.com</a><br/>
+        GitHub: <a href="https://github.com/negarinarianfar" target="_blank" style="color:var(--accent);text-decoration:none;">github.com/negarinarianfar</a>
+      </p>
+    </section>
+
+    <footer>© 2026 Negar Arianfar</footer>
+
+  </div>
+</body>
+</html>
