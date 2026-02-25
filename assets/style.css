@@ -65,6 +65,9 @@
   position: relative;
   min-height: 520px;   /* این خط مهمه */
 }
+.hero-buttons {
+  margin-bottom: 60px;
+}
 
 /* Avatar placement */
 .profile-pic{
@@ -118,6 +121,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
     padding:6px 10px; border-radius:999px;
     border:1px solid rgba(31,42,68,0.9);
     background: rgba(11,18,32,0.35);
+    margin-bottom: 25px;
   }
   .project{
     padding:16px; border-radius:18px;
@@ -131,8 +135,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
   .links a:hover{text-decoration:underline;}
   ul{margin:10px 0 0 18px; color:var(--muted)}
   footer{padding:32px 0; text-align:center; color:var(--muted); font-size:13px;}
-</style>
-  <style>
+
 .books-container {
     display: flex;
     flex-direction: column;
@@ -182,8 +185,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
 .amazon-btn:hover {
     background-color: #009acd;
 }
-</style>
-  <style>
+
 .research-questions {
     background-color: #141414;
     padding: 25px;
@@ -200,8 +202,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
     color: #cccccc;
     line-height: 1.6;
 }
-</style>
-  <style>
+
 .pub-item {
     background-color: #141414;
     padding: 18px;
@@ -230,9 +231,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
 .pub-links a:hover {
     text-decoration: underline;
 }
-</style>
 
-  <style>
 .results-box {
     background-color: #101820;
     padding: 15px;
