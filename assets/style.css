@@ -47,7 +47,7 @@
   .dot{width:8px;height:8px;border-radius:50%;background:var(--accent); box-shadow:0 0 18px rgba(56,189,248,0.6);}
   h1{font-size:46px; margin:18px 0 10px; letter-spacing:-0.5px;}
   .subtitle{font-size:18px; color:var(--muted); max-width:780px;}
-  .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;}
+  .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;}
   .btn{
     display:inline-flex; align-items:center; gap:10px;
     padding:10px 14px; border-radius:14px;
