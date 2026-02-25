@@ -255,9 +255,9 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
 }
 /* Projects pages: keep content away from edges */
 .page {
-  padding-left: 28px !important;
-  padding-right: 28px !important;
-  padding-bottom: 60px !important;
+  max-width: 1000px;
+  margin: 90px auto;
+  padding: 0 24px 120px;  /* ← این عدد آخر فاصله پایین است */
   box-sizing: border-box;
 }
 
