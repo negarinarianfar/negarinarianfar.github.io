@@ -200,6 +200,28 @@
     text-decoration: underline;
 }
 </style>
+
+  <style>
+.results-box {
+    background-color: #101820;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.results-box strong {
+    color: #ffffff;
+}
+
+.results-box img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
@@ -364,6 +386,22 @@ The goal is to bridge human strategic theory and computational decision optimiza
           <li>DQN with replay buffer, target network, epsilon-greedy exploration</li>
           <li>Evaluation pipeline and reward-curve visualization</li>
         </ul>
+        <div class="results-box">
+<strong>Experimental Results</strong><br><br>
+
+Average reward over 100 evaluation episodes: -0.58 <br>
+Win rate vs random opponent: 32% <br>
+Training episodes: 2000 <br>
+State encoding: 4×4×4 tensor<br><br>
+
+<strong>Training Curve (Moving Average, window=50)</strong><br>
+<img src="assets/minichess_reward_curve.png" alt="MiniChess RL Reward Curve">
+<br><br>
+
+<strong>Run Instructions:</strong><br>
+Train: <code>python3 training/train.py</code><br>
+Evaluate: <code>python3 training/evaluate.py</code>
+</div>
         <div class="tags">
           <span class="tag">PyTorch</span>
           <span class="tag">DQN</span>
