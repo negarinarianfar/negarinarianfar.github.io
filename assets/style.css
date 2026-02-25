@@ -132,7 +132,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
     margin-top:12px;
   }
   .project-title{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
-  .project-title strong{font-size:15px;}
+  .project-title strong{font-size:9px;}
   .links a{color:var(--accent); text-decoration:none; font-size:13px; margin-right:12px;}
   .links a:hover{text-decoration:underline;}
   ul{margin:10px 0 0 18px; color:var(--muted)}
