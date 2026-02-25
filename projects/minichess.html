@@ -1,299 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MiniChess-RL | Negar Arianfar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniChess-RL | Negar Arianfar</title>
 
-  <!-- اگر سایتت style.css در روت هست همین درسته -->
-  <link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="/style.css">
 
-  <style>
-    .page {
-      max-width: 980px;
-      margin: 90px auto;
-      padding: 0 20px 60px;
-    }
+<style>
+body {
+  margin: 0;
+}
 
-    .breadcrumbs {
-      opacity: 0.75;
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-    .breadcrumbs a { text-decoration: none; }
+.page {
+  max-width: 1000px;
+  margin: 90px auto;
+  padding: 0 20px 60px;
+}
 
-    .header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
+.back-link {
+  opacity: 0.7;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 
-    .title h1 {
-      margin: 0 0 8px 0;
-      font-size: 2rem;
-      letter-spacing: 0.2px;
-    }
-    .subtitle {
-      opacity: 0.8;
-      max-width: 62ch;
-      line-height: 1.55;
-      margin: 0;
-    }
+.back-link a {
+  text-decoration: none;
+}
 
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
+.project-header h1 {
+  margin-bottom: 10px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 9px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.03);
-      text-decoration: none;
-      transition: 0.25s ease;
-      font-size: 14px;
-      opacity: 0.95;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(0,140,255,0.55);
-    }
+.project-subtitle {
+  opacity: 0.85;
+  max-width: 750px;
+  line-height: 1.6;
+}
 
-    .pill-row { margin: 14px 0 8px; display:flex; gap:8px; flex-wrap: wrap; }
-    .pill {
-      font-size: 12.5px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.02);
-      opacity: 0.9;
-    }
+.links {
+  margin-top: 15px;
+}
 
-    .card {
-      margin-top: 18px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.03);
-      border-radius: 18px;
-      padding: 18px;
-    }
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.25s ease;
+}
 
-    .card h2 {
-      margin: 0 0 10px 0;
-      font-size: 1.1rem;
-    }
-    .card p, .card li {
-      opacity: 0.88;
-      line-height: 1.65;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,140,255,0.6);
+}
 
-    .grid-2 {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    @media (max-width: 860px) {
-      .grid-2 { grid-template-columns: 1fr; }
-    }
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 22px;
+  border-radius: 16px;
+  margin-top: 25px;
+}
 
-    .kpi {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-top: 10px;
-    }
-    @media (max-width: 860px) {
-      .kpi { grid-template-columns: 1fr; }
-    }
+.card h2 {
+  margin-top: 0;
+}
 
-    .kpi-box {
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 16px;
-      padding: 12px 14px;
-      background: rgba(0,0,0,0.12);
-    }
-    .kpi-label { font-size: 13px; opacity: 0.75; }
-    .kpi-value { font-size: 20px; margin-top: 6px; font-weight: 600; }
-    .kpi-note  { font-size: 12.5px; opacity: 0.7; margin-top: 2px; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
 
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.95em;
-      opacity: 0.95;
-    }
+.kpi-box {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(0,0,0,0.2);
+}
 
-    .figure {
-      margin-top: 10px;
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 16px;
-      overflow: hidden;
-      background: rgba(0,0,0,0.12);
-    }
-    .figure img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .figure figcaption {
-      padding: 10px 12px;
-      font-size: 13px;
-      opacity: 0.75;
-    }
+.kpi-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
 
-    .hr {
-      height: 1px;
-      background: rgba(255,255,255,0.10);
-      margin: 18px 0;
-    }
-  </style>
+.kpi-value {
+  font-size: 20px;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+img.training-curve {
+  max-width: 100%;
+  border-radius: 14px;
+  margin-top: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+</style>
 </head>
 
 <body>
-  <main class="page">
 
-    <div class="breadcrumbs">
-      ← <a href="/projects/">Projects</a>
-    </div>
+<div class="page">
 
-    <div class="header">
-      <div class="title">
-        <h1>MiniChess-RL</h1>
-        <p class="subtitle">
-          A reproducible reinforcement learning pipeline for a custom 4×4 mini-chess environment,
-          focused on environment design, reward shaping, and structured evaluation.
-        </p>
+<div class="back-link">
+← <a href="/projects/">Back to Projects</a>
+</div>
 
-        <div class="pill-row">
-          <span class="pill">Reinforcement Learning</span>
-          <span class="pill">DQN</span>
-          <span class="pill">Environment Design</span>
-          <span class="pill">Reward Shaping</span>
-          <span class="pill">Evaluation</span>
-        </div>
-      </div>
+<div class="project-header">
+<h1>MiniChess-RL: Deep Q-Network Agent in a Custom 4×4 Chess Environment</h1>
 
-      <div class="actions">
-        <a class="btn" href="https://github.com/negarinarianfar/mini-chess-rl" target="_blank" rel="noreferrer">
-          GitHub Repo
-        </a>
-        <!-- اگر PDF گزارش/تکنیکال ریپورت رو بعداً گذاشتی -->
-        <!-- <a class="btn" href="/assets/pdf/minichess_report.pdf" target="_blank" rel="noreferrer">PDF Report</a> -->
-      </div>
-    </div>
+<p class="project-subtitle">
+MiniChess-RL is a fully custom reinforcement learning environment where a Deep Q-Network
+agent is trained end-to-end in a 4×4 chess setting. The project focuses on
+environment modeling, reward shaping, illegal action masking, and structured evaluation
+with reproducible experiments.
+</p>
 
-    <section class="card">
-      <h2>Research Question</h2>
-      <p>
-        How do environment design choices (state/action formalization, illegal-move handling)
-        and reward shaping affect learning stability and measurable performance in a compact
-        chess-like decision environment with a large discrete action space?
-      </p>
-    </section>
+<div class="links">
+<a class="btn" href="https://github.com/negarinarianfar/mini-chess-rl" target="_blank">
+GitHub Repository
+</a>
+</div>
+</div>
 
-    <section class="card">
-      <h2>System Overview</h2>
-      <div class="grid-2">
-        <div>
-          <ul>
-            <li><b>Environment:</b> custom 4×4 mini-chess</li>
-            <li><b>State:</b> tensor-based representation</li>
-            <li><b>Action space:</b> up to 256 discrete actions (including illegal moves handling)</li>
-            <li><b>Opponent:</b> baseline opponent for evaluation (e.g., random)</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li><b>Agent:</b> Deep Q-Network (PyTorch)</li>
-            <li><b>Core components:</b> replay buffer, target network, ε-greedy exploration</li>
-            <li><b>Goal:</b> reproducible training + structured evaluation protocol</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <section class="card">
-      <h2>Method Details</h2>
-      <ul>
-        <li><b>Learning algorithm:</b> DQN with target network stabilization</li>
-        <li><b>Exploration:</b> epsilon-greedy with decay schedule</li>
-        <li><b>Training loop:</b> experience collection → replay sampling → Q-update → periodic target sync</li>
-        <li><b>Reward design:</b> terminal rewards (win/loss) + shaping (captures / illegal move penalty / etc.)</li>
-      </ul>
-    </section>
+<div class="card">
+<h2>Research Question</h2>
+<p>
+How do reward design choices and environment modeling decisions affect
+learning stability and measurable performance in a compact chess-like MDP
+with a large discrete action space?
+</p>
+</div>
 
-    <section class="card">
-      <h2>Results (measurable metrics)</h2>
 
-      <!-- این 3 تا KPI رو وقتی عدد داری پر کن -->
-      <div class="kpi">
-        <div class="kpi-box">
-          <div class="kpi-label">Win rate vs baseline</div>
-          <div class="kpi-value">TBD%</div>
-          <div class="kpi-note">evaluated over N games</div>
-        </div>
+<div class="card">
+<h2>System Design</h2>
+<ul>
+<li>Custom Gym-style environment with full MDP formalization</li>
+<li>State encoding: 4-channel tensor (WK, WR, BK, turn)</li>
+<li>Action space: 256 discrete actions (from × to)</li>
+<li>DQN with replay buffer and target network stabilization</li>
+<li>Epsilon-greedy exploration strategy</li>
+<li>Evaluation pipeline with reward-curve visualization</li>
+</ul>
+</div>
 
-        <div class="kpi-box">
-          <div class="kpi-label">Average reward</div>
-          <div class="kpi-value">TBD</div>
-          <div class="kpi-note">mean ± std (N episodes)</div>
-        </div>
 
-        <div class="kpi-box">
-          <div class="kpi-label">Training stability</div>
-          <div class="kpi-value">TBD</div>
-          <div class="kpi-note">variance / curve smoothness</div>
-        </div>
-      </div>
+<div class="card">
+<h2>Experimental Results</h2>
 
-      <div class="hr"></div>
+<div class="kpi-grid">
 
-      <p>
-        Optional figure: add a training curve image at
-        <code>/assets/img/projects/reward_curve.png</code> and uncomment the block below.
-      </p>
+<div class="kpi-box">
+<div class="kpi-label">Training Episodes</div>
+<div class="kpi-value">2000</div>
+</div>
 
-      <!--
-      <figure class="figure">
-        <img src="/assets/img/projects/reward_curve.png" alt="Training curve: reward over episodes">
-        <figcaption>Training curve (reward over episodes).</figcaption>
-      </figure>
-      -->
-    </section>
+<div class="kpi-box">
+<div class="kpi-label">Win Rate vs Random</div>
+<div class="kpi-value">19%</div>
+</div>
 
-    <section class="card">
-      <h2>Reproducibility</h2>
-      <ul>
-        <li><b>Re-run:</b> keep dependencies pinned (requirements / environment file)</li>
-        <li><b>Seeds:</b> run multiple seeds to estimate variance</li>
-        <li><b>Evaluation protocol:</b> fixed number of games vs baseline at set checkpoints</li>
-      </ul>
+<div class="kpi-box">
+<div class="kpi-label">Average Reward (100 eval episodes)</div>
+<div class="kpi-value">-0.588</div>
+</div>
 
-      <p class="muted">
-        Suggested command format (edit to match your repo):
-        <br/>
-        <code>python train.py --episodes 1000 --seed 0</code>
-      </p>
-    </section>
+</div>
 
-    <section class="card">
-      <h2>Limitations & Next Steps</h2>
-      <ul>
-        <li>Run ablations: compare reward shaping variants and illegal-move handling strategies.</li>
-        <li>Add stronger baselines (heuristic agent) and more rigorous evaluation (multiple seeds).</li>
-        <li>Extend toward self-play / multi-agent setups to study learning dynamics.</li>
-      </ul>
-    </section>
+<p style="margin-top:15px;">
+Results demonstrate partial learning behavior and highlight the sensitivity of
+reward shaping and exploration scheduling in compact adversarial environments.
+</p>
 
-    <p style="opacity:0.8; margin-top:18px;">
-      ← Back to <a href="/projects/">Projects</a>
-    </p>
+<img class="training-curve"
+src="/assets/minichess_reward_curve.png"
+alt="MiniChess RL Reward Curve">
 
-  </main>
+</div>
+
+
+<div class="card">
+<h2>Reproducibility</h2>
+
+<p><strong>Train:</strong></p>
+<code>python3 training/train.py</code>
+
+<p style="margin-top:12px;"><strong>Evaluate:</strong></p>
+<code>python3 training/evaluate.py</code>
+
+<p style="margin-top:15px;">
+Experiments were conducted using PyTorch with a fixed evaluation protocol
+and greedy policy testing.
+</p>
+
+</div>
+
+
+<div class="card">
+<h2>Future Directions</h2>
+<ul>
+<li>Reward shaping ablation studies</li>
+<li>Multiple seed evaluation for variance analysis</li>
+<li>Self-play extension and stronger baselines</li>
+<li>Architectural comparison (Double DQN / Dueling DQN)</li>
+</ul>
+</div>
+
+
+<div class="tags">
+<span class="tag">Reinforcement Learning</span>
+<span class="tag">Deep Q-Network</span>
+<span class="tag">Environment Design</span>
+<span class="tag">Illegal Action Masking</span>
+<span class="tag">Evaluation</span>
+<span class="tag">PyTorch</span>
+</div>
+
+</div>
+
 </body>
 </html>
