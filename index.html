@@ -66,35 +66,39 @@
     border-color: rgba(56,189,248,0.35);
   }
     
-/* Ensure hero is positioning context */
-.hero, .hero-section, header, .container {
+
+/* Make ONLY the main hero wrapper relative */
+/* اسم کلاس رو اگر فرق داشت عوض کن */
+.hero, .main-hero, .landing {
   position: relative;
+  min-height: 520px;   /* این خط مهمه */
 }
 
-/* Place photo on the right side */
-.profile-pic{
+/* Avatar placement */
+.profile-pic {
   position: absolute;
-  right: 8%;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 10%;
+  top: 160px;          /* به جای 50% از بالا، عدد ثابت */
   
-  width: 190px;
-  height: 190px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
 
   border: 2px solid rgba(255,255,255,0.12);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
 
-  z-index: 5;
+  z-index: 2;
 }
 
-/* Responsive: hide on small screens */
+/* Hide on small screens */
 @media (max-width: 1000px){
   .profile-pic{
     display: none;
   }
 }
+
+  
 
   .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:28px;}
   @media(min-width:900px){
