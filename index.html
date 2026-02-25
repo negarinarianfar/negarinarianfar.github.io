@@ -101,6 +101,57 @@
   ul{margin:10px 0 0 18px; color:var(--muted)}
   footer{padding:32px 0; text-align:center; color:var(--muted); font-size:13px;}
 </style>
+  <style>
+.books-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.book-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.book-item img {
+    width: 160px;
+    border-radius: 10px;
+}
+
+.book-content {
+    flex: 1;
+}
+
+.book-content h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.book-content p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.amazon-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #00bfff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.amazon-btn:hover {
+    background-color: #009acd;
+}
+</style>
 </head>
 
 <body>
@@ -226,34 +277,50 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="project">
-        <img src="assets/chessbook.jpg" alt="Chessboard of Business" 
-         style="width:180px; border-radius:8px; margin-bottom:10px;"><br>
-<strong>Book: Chessboard of Business</strong><br>
-A step-by-step guide to strategic business building inspired by chess thinking. 
-The book explores decision-making, foresight, risk management, and structured business planning.
-         <br><br>
-<a href="https://www.amazon.com/Chessboard-Business-Negar-Arianfar/dp/B0FVVR5H9P/ref=sr_1_6?crid=30GQIEPDHUTQN&dib=eyJ2IjoiMSJ9.KREht6HSbQovaIJXJG4SRw_F-z8rxR78Ba0kH6JLxpnBH4sWAHQz1ig-xRlHZlJmTXpUi-z9-MutyM7bxSljggNU1ivA7ims9Ixvlm6K-vE3V4Yp1gC1-GoTgT0t9hNF8y5jmTkqxBAXROTTxfdTj3g642BUPHVa8SrENOsjLOs6NT3POkS7gtqIiBdFxThDgrUPLKfagtCGnuxsy055_9B8XDdiTYoDOKEkDQVnbC8.9XYZJAT5aUOU9lR9SBXjPEG4rx-KxJS1LA4wPuHkgok&dib_tag=se&keywords=chessboard+of+Business&qid=1771977635&sprefix=chessboard+of+business+%2Caps%2C207&sr=8-6" 
-   target="_blank" 
-   style="color:#00bfff; text-decoration:none; font-weight:bold;">
-   → Available on Amazon
-</a>
+    <div class="section" id="books">
+<h2>Books</h2>
+
+<div class="books-container">
+
+<!-- RL Book -->
+<div class="book-item">
+    <img src="assets/rlbook.jpg" alt="Learning Reinforcement Learning Through Projects: From Zero to your First Deep Q-Network">
+    
+    <div class="book-content">
+        <h3>Learning Reinforcement Learning Through Projects: From Zero to your First Deep Q-Network </h3>
+        <p>
+        A practical and intuitive introduction to reinforcement learning,
+        guiding readers from bandit problems to Deep Q-Networks (DQN).
+        The book emphasizes environment design, reward modeling,
+        instability analysis, and hands-on implementation.
+        </p>
+        
+        <a href="https://www.amazon.com/Learning-Reinforcement-Through-Projects-Q-Network/dp/B0GPGP8X8Z/ref=sr_1_1?crid=17K1TT2X3M7I3&dib=eyJ2IjoiMSJ9.L4bzY_O1hfxRg4WIdU3yngHKNfbIJ-VLNBVjo3N7k4n2QyPIXdKH0TkYqgqM76WjJfSGjRpit20soxLPachegw.vHMQScvnkGGYyTqhXN7htsZ374-_oT7lW80lnHTzvU8&dib_tag=se&keywords=learning+reinforcement+learning+projects+negar+arianfar&qid=1771977543&sprefix=learning+reinforcement+learning+projects+negar+arianfar%2Caps%2C174&sr=8-1" target="_blank" class="amazon-btn">
+        View on Amazon
+        </a>
+    </div>
 </div>
 
-<div class="project">
-  <img src="assets/rlbook.jpg" alt="Learning Reinforcement Learning Through Projects: From Zero to your First Deep Q-Network" 
-         style="width:180px; border-radius:8px; margin-bottom:10px;"><br>
-<strong>Book: Learning Reinforcement Learning Through Projects: From Zero to your First Deep Q-Network</strong><br>
-A practical exploration of entrepreneurship, business modeling, and applied strategy development.
-  <br><br>
-<a href="https://www.amazon.com/Learning-Reinforcement-Through-Projects-Q-Network/dp/B0GPGP8X8Z/ref=sr_1_1?crid=17K1TT2X3M7I3&dib=eyJ2IjoiMSJ9.L4bzY_O1hfxRg4WIdU3yngHKNfbIJ-VLNBVjo3N7k4n2QyPIXdKH0TkYqgqM76WjJfSGjRpit20soxLPachegw.vHMQScvnkGGYyTqhXN7htsZ374-_oT7lW80lnHTzvU8&dib_tag=se&keywords=learning+reinforcement+learning+projects+negar+arianfar&qid=1771977543&sprefix=learning+reinforcement+learning+projects+negar+arianfar%2Caps%2C174&sr=8-1" 
-   target="_blank" 
-   style="color:#00bfff; text-decoration:none; font-weight:bold;">
-   → Available on Amazon
-</a>
+<!-- Business Book -->
+<div class="book-item">
+    <img src="assets/chessbook.jpg" alt="Chessboard of Business">
+    
+    <div class="book-content">
+        <h3>Chessboard of Business</h3>
+        <p>
+        A strategic guide to building successful businesses through
+        structured decision-making, foresight, and chess-inspired thinking.
+        Focused on practical frameworks for sustainable growth.
+        </p>
+        
+        <a href="https://www.amazon.com/Chessboard-Business-Negar-Arianfar/dp/B0FVVR5H9P/ref=sr_1_6?crid=30GQIEPDHUTQN&dib=eyJ2IjoiMSJ9.KREht6HSbQovaIJXJG4SRw_F-z8rxR78Ba0kH6JLxpnBH4sWAHQz1ig-xRlHZlJmTXpUi-z9-MutyM7bxSljggNU1ivA7ims9Ixvlm6K-vE3V4Yp1gC1-GoTgT0t9hNF8y5jmTkqxBAXROTTxfdTj3g642BUPHVa8SrENOsjLOs6NT3POkS7gtqIiBdFxThDgrUPLKfagtCGnuxsy055_9B8XDdiTYoDOKEkDQVnbC8.9XYZJAT5aUOU9lR9SBXjPEG4rx-KxJS1LA4wPuHkgok&dib_tag=se&keywords=chessboard+of+Business&qid=1771977635&sprefix=chessboard+of+business+%2Caps%2C207&sr=8-6" target="_blank" class="amazon-btn">
+        View on Amazon
+        </a>
+    </div>
 </div>
-    </section>
+
+</div>
+</div>
 
     <section class="section" id="cv">
       <h2>CV</h2>
