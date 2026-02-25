@@ -7,3 +7,260 @@ body {
 .section {
   padding: 40px;
 }
+
+<style>
+  :root{
+    --bg:#0b1220;
+    --panel:#0f172a;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --line:#1f2a44;
+    --accent:#38bdf8;
+    --accent2:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 700px at 20% 10%, rgba(56,189,248,0.15), transparent 60%),
+                radial-gradient(900px 600px at 80% 30%, rgba(167,139,250,0.12), transparent 60%),
+                var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  .container{width:88%; max-width:1050px; margin:0 auto;}
+  nav{
+    display:flex; justify-content:flex-end; gap:18px;
+    padding:22px 0;
+    position:sticky; top:0;
+    background: rgba(11,18,32,0.75);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(31,42,68,0.6);
+    z-index:10;
+  }
+  nav a{
+    color:var(--muted); text-decoration:none; font-size:14px;
+    padding:8px 10px; border-radius:10px;
+  }
+  nav a:hover{color:var(--accent); background:rgba(56,189,248,0.08);}
+  .hero{padding:70px 0 30px;}
+  .kicker{
+    display:inline-flex; gap:10px; align-items:center;
+    font-size:13px; color:var(--muted);
+    border:1px solid rgba(31,42,68,0.8);
+    padding:8px 12px; border-radius:999px;
+    background: rgba(15,23,42,0.65);
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent); box-shadow:0 0 18px rgba(56,189,248,0.6);}
+  h1{font-size:46px; margin:18px 0 10px; letter-spacing:-0.5px;}
+  .subtitle{font-size:18px; color:var(--muted); max-width:780px;}
+  .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:10px 14px; border-radius:14px;
+    text-decoration:none; font-size:14px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(15,23,42,0.75);
+    color:var(--text);
+  }
+  .btn:hover{border-color:rgba(56,189,248,0.6); box-shadow:0 0 0 3px rgba(56,189,248,0.08);}
+  .btn.primary{
+    background: linear-gradient(135deg, rgba(56,189,248,0.22), rgba(167,139,250,0.18));
+    border-color: rgba(56,189,248,0.35);
+  }
+    
+
+/* Make ONLY the main hero wrapper relative */
+/* اسم کلاس رو اگر فرق داشت عوض کن */
+.hero, .main-hero, .landing {
+  position: relative;
+  min-height: 520px;   /* این خط مهمه */
+}
+
+/* Avatar placement */
+.profile-pic{
+  position: absolute;
+
+  right: 1%;      /* قبلاً 10% بود → نزدیک‌تر به لبه */
+  top: 90px;     /* اگر لازم شد 140–170 تنظیم کن */
+
+  width: 230px;   /* بزرگ‌تر */
+  height: 230px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid rgba(255,255,255,0.12);
+  box-shadow: 
+      0 0 50px rgba(0,140,255,0.15),
+      0 25px 50px rgba(0,0,0,0.5);
+
+  z-index: 2;
+}
+
+/* Hide on small screens */
+@media (max-width: 1000px){
+  .profile-pic{
+    display: none;
+  }
+}
+box-shadow: 0 0 40px rgba(0,140,255,0.15),
+            0 20px 40px rgba(0,0,0,0.45);
+  
+
+  .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:28px;}
+  @media(min-width:900px){
+    .grid{grid-template-columns: 1.2fr 0.8fr;}
+  }
+
+  .card{
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(15,23,42,0.65);
+    border-radius:20px;
+    padding:18px 18px;
+  }
+  .card h3{margin:0 0 10px; font-size:16px; color:var(--accent);}
+  .section{padding:34px 0; border-top:1px solid rgba(31,42,68,0.7);}
+  .section h2{margin:0 0 14px; color:var(--accent); font-size:18px;}
+  .muted{color:var(--muted)}
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .tag{
+    font-size:12px; color:var(--muted);
+    padding:6px 10px; border-radius:999px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(11,18,32,0.35);
+  }
+  .project{
+    padding:16px; border-radius:18px;
+    border:1px solid rgba(31,42,68,0.9);
+    background: rgba(11,18,32,0.35);
+    margin-top:12px;
+  }
+  .project-title{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .project-title strong{font-size:15px;}
+  .links a{color:var(--accent); text-decoration:none; font-size:13px; margin-right:12px;}
+  .links a:hover{text-decoration:underline;}
+  ul{margin:10px 0 0 18px; color:var(--muted)}
+  footer{padding:32px 0; text-align:center; color:var(--muted); font-size:13px;}
+</style>
+  <style>
+.books-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.book-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.book-item img {
+    width: 160px;
+    border-radius: 10px;
+}
+
+.book-content {
+    flex: 1;
+}
+
+.book-content h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.book-content p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.amazon-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #00bfff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.amazon-btn:hover {
+    background-color: #009acd;
+}
+</style>
+  <style>
+.research-questions {
+    background-color: #141414;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.research-questions ul {
+    padding-left: 20px;
+}
+
+.research-questions li {
+    margin-bottom: 12px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+</style>
+  <style>
+.pub-item {
+    background-color: #141414;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.pub-title {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.pub-meta {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.pub-links a {
+    color: #00bfff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+</style>
+
+  <style>
+.results-box {
+    background-color: #101820;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.results-box strong {
+    color: #ffffff;
+}
+
+.results-box img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+</style>
