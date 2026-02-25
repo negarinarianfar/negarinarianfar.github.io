@@ -6,7 +6,6 @@
 <title>Negarin Arianfar</title>
 <link rel="stylesheet" href="assets/style.css">
 
-
 </head>
 
 <body>
@@ -175,38 +174,8 @@ The goal is to bridge human strategic theory and computational decision optimiza
           Built a custom 4×4 mini-chess environment and trained a DQN agent end-to-end using Python + PyTorch.
           The project demonstrates environment modeling, reward shaping, illegal move masking, training loops, and evaluation.
         </p>
-        <ul>
-          <li>Custom Gym-style environment with full MDP formalization</li>
-          <li>State encoding: 4-channel tensor (WK, WR, BK, turn); action space: 256 (from×to)</li>
-          <li>DQN with replay buffer, target network, epsilon-greedy exploration</li>
-          <li>Evaluation pipeline and reward-curve visualization</li>
-        </ul>
-        <div class="results-box">
-<strong>Experimental Results</strong><br><br>
-
-Average reward (100 evaluation episodes, greedy policy): -0.588 <br>
-Win rate vs random opponent: 19% <br>
-Training episodes: 2000 <br>
-State encoding: 4×4×4 tensor<br><br>
-
-<strong>Training Curve (Moving Average, window=50)</strong><br>
-<img src="assets/minichess_reward_curve.png" alt="MiniChess RL Reward Curve">
-<br><br>
-
-<strong>Run Instructions:</strong><br>
-Train: <code>python3 training/train.py</code><br>
-Evaluate: <code>python3 training/evaluate.py</code>
-</div>
-        <div class="tags">
-          <span class="tag">PyTorch</span>
-          <span class="tag">DQN</span>
-          <span class="tag">Environment Design</span>
-          <span class="tag">Illegal Action Masking</span>
-          <span class="tag">Evaluation</span>
-        </div>
-      </div>
             <a class="btn" href="/projects/minichess.html">View Details</a>
-
+          
       <div class="project">
         <div class="project-title">
           <strong>Working Paper: RL Formulation of Energy-Aware Optimization (in progress)</strong>
