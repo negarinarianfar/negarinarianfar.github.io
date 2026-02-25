@@ -6,6 +6,10 @@
     --line:#1f2a44;
     --accent:#38bdf8;
     --accent2:#a78bfa;
+    --space-xl:80px;
+    --space-lg:60px;
+    --space-md:30px;
+    --space-sm:15px;
   }
   *{box-sizing:border-box}
   body{
