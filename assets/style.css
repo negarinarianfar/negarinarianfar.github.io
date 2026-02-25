@@ -67,7 +67,6 @@
 /* اسم کلاس رو اگر فرق داشت عوض کن */
 .hero, .main-hero, .landing {
   position: relative;
-  min-height: 520px;   /* این خط مهمه */
    margin-bottom: 60px;
 }
 
