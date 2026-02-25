@@ -253,3 +253,18 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
     margin-top: 15px;
     border-radius: 8px;
 }
+/* Projects pages: keep content away from edges */
+.page {
+  max-width: 1000px;
+  margin: 90px auto;
+  padding: 0 24px 60px;  /* فاصله از چپ و راست */
+  box-sizing: border-box;
+}
+
+/* Mobile: کمی بیشتر فضا بده */
+@media (max-width: 600px) {
+  .page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
