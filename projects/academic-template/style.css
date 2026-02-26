@@ -212,4 +212,8 @@ body.dark-ai footer {
   color: rgba(229,231,235,0.55);
   border-top: 1px solid rgba(255,255,255,0.10);
 }
-.topbar a{color:#93c5fd;text-decoration:none}
+.brand{
+  color: var(--blue);
+  text-decoration:none;
+  font-weight:600;
+}
