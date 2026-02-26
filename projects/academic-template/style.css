@@ -212,7 +212,7 @@ body.dark-ai footer {
   color: rgba(229,231,235,0.55);
   border-top: 1px solid rgba(255,255,255,0.10);
 }
-.top a {
+.topbar a {
   display: inline-block;
   padding: 8px 14px;
   border-radius: 8px;
@@ -223,7 +223,7 @@ body.dark-ai footer {
   transition: 0.3s ease;
 }
 
-.top a:hover {
+.topbar a:hover {
   background: #60a5fa;
   color: #0b1020;
 }
