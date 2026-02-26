@@ -160,7 +160,7 @@ h1{
 
 .section{padding: 90px 0}
 .section + .section {
-  margin-top:40px;
+  margin-top:20px;
 }
 .section-head{margin-bottom: 16px}
 .section-head h2{margin:0 0 6px; font-size: 28px}
