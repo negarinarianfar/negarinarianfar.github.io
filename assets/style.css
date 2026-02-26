@@ -268,3 +268,15 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
   padding-right: 18px !important;
 }
 }
+.back-btn {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
