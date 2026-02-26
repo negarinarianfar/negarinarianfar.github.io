@@ -1,87 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Jane Doe | Reinforcement Learning</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body class="dark-ai">
-  <div class="container">
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
       <a class="brand" href="/web-projects/">← Web Projects</a>
+      <nav class="nav">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <h1>Web Projects</h1>
-    <p>Minimal, research-oriented website templates and technical portfolio demos.</p>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="badge">PhD Candidate • Reinforcement Learning</p>
+        <h1>Decision-making systems for games and real-world control.</h1>
+        <p class="lead">
+          I work on deep reinforcement learning, efficient exploration, and evaluation of agents in structured environments.
+        </p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Academic Website Template</h3>
-        <p>Clean academic portfolio layout (research, publications, projects, contact).</p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="Download CV">CV (PDF)</a>
+          <a class="btn ghost" href="#" aria-label="Google Scholar">Google Scholar</a>
+          <a class="btn ghost" href="#" aria-label="GitHub">GitHub</a>
+        </div>
+
         <div class="links">
-          <a href="/projects/academic-template/">Live Demo</a>
-          <a href="https://github.com/negarinarianfar/negarinarianfar.github.io">Code</a>
+          <a href="mailto:email@example.com">email@example.com</a>
+          <span class="sep">•</span>
+          <span class="muted">Berlin, Germany</span>
         </div>
       </div>
 
-      <!-- بعداً اینا رو هم اضافه می‌کنی -->
-      <!--
-      <div class="card">
-        <h3>Developer Portfolio Template</h3>
-        <p>Modern portfolio for engineers and data scientists.</p>
-        <div class="links">
-          <a href="/projects/portfolio-template/">Live Demo</a>
-          <a href="...">Code</a>
+      <aside class="hero-card">
+        <div class="stat">
+          <span class="stat-num">RL</span>
+          <span class="stat-label">Research focus</span>
         </div>
-      </div>
-      -->
-    </div>
-  </div>
-</body>
-</html>        </div>
-        <div class="card">
-          <h3>Deep RL</h3>
-          <p>Function approximation using deep neural networks.</p>
+        <div class="stat">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Active projects</span>
         </div>
-        <div class="card">
-          <h3>Game AI</h3>
-          <p>Planning and strategy optimization in board games.</p>
+        <div class="stat">
+          <span class="stat-num">Fast</span>
+          <span class="stat-label">Clean delivery</span>
         </div>
-      </div>
+
+        <div class="mini-note">
+          <h3>Available for</h3>
+          <p>Academic websites and technical portfolios (GitHub Pages / Netlify).</p>
+        </div>
+      </aside>
     </section>
 
-    <section>
-      <h2>Selected Projects</h2>
+    <section id="research" class="section">
+      <div class="section-head">
+        <h2>Research Interests</h2>
+        <p>Focused topics with short, concrete descriptions.</p>
+      </div>
+
       <div class="grid">
-        <div class="card">
+        <article class="card">
+          <h3>Reinforcement Learning</h3>
+          <p>Model-free and model-based RL for sequential decision making.</p>
+          <div class="meta">
+            <span class="pill">Policy Optimization</span>
+            <span class="pill">Q-learning</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Deep RL</h3>
+          <p>Representation learning and function approximation for scalable agents.</p>
+          <div class="meta">
+            <span class="pill">PyTorch</span>
+            <span class="pill">DQN</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Game AI</h3>
+          <p>Planning, search, and evaluation protocols in board games.</p>
+          <div class="meta">
+            <span class="pill">MCTS</span>
+            <span class="pill">Evaluation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <p>Short summaries + clear links (demo/code/report).</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
           <h3>MiniChess-RL</h3>
-          <p>Q-learning agent trained to play MiniChess using Python.</p>
-        </div>
-        <div class="card">
+          <p>Q-learning agent trained to play MiniChess with evaluation against baseline opponents.</p>
+          <div class="meta">
+            <span class="pill">Python</span>
+            <span class="pill">RL</span>
+            <span class="pill">Q-learning</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="#">Code</a>
+            <a class="link" href="#">Report</a>
+          </div>
+        </article>
+
+        <article class="card">
           <h3>DQN CartPole</h3>
-          <p>Implementation of Deep Q-Network on OpenAI Gym environment.</p>
+          <p>DQN baseline with replay buffer, target network, and learning curves.</p>
+          <div class="meta">
+            <span class="pill">PyTorch</span>
+            <span class="pill">Gym</span>
+            <span class="pill">DQN</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="#">Code</a>
+            <a class="link" href="#">Results</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Academic Website Template</h3>
+          <p>Minimal research portfolio template with clean structure and fast deploy.</p>
+          <div class="meta">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">Responsive</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="/web-projects/">Gallery</a>
+            <a class="link" href="#">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section alt">
+      <div class="section-head">
+        <h2>Publications</h2>
+        <p>List papers, preprints, or works in progress.</p>
+      </div>
+
+      <div class="pub card">
+        <p class="muted">
+          Manuscripts in preparation. Preprints will be available soon.
+        </p>
+
+        <ul class="pub-list">
+          <li>
+            <strong>Paper Title (in preparation)</strong><br />
+            <span class="muted">Jane Doe, Coauthor — 2026</span>
+          </li>
+          <li>
+            <strong>Workshop note / technical report</strong><br />
+            <span class="muted">Jane Doe — 2026</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>For collaboration or a custom academic/technical website.</p>
+      </div>
+
+      <div class="card contact">
+        <div>
+          <h3>Let’s connect</h3>
+          <p class="muted">Email is the fastest way to reach me.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="mailto:email@example.com">Email me</a>
+          <a class="btn ghost" href="#">LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Publications</h2>
-      <p>
-        Manuscripts in preparation. Preprints will be available soon.
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: email@example.com</p>
-      <p>Location: Berlin, Germany</p>
-    </section>
-
-  </div>
-
-  <footer>
-    © 2026 Jane Doe. Built with HTML & CSS. Deployed on GitHub Pages.
-  </footer>
-
+    <footer class="footer">
+      <p>© 2026 Jane Doe. Built with HTML/CSS. Deployed on GitHub Pages.</p>
+    </footer>
+  </main>
 </body>
 </html>
