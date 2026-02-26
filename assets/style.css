@@ -269,11 +269,12 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
 }
 }
 .back-btn {
-  color: var(--accent);
+  color: #8bd3ff;
   text-decoration: none;
   font-size: 14px;
   opacity: 0.8;
   transition: 0.2s ease;
+  margin-left: 10px;
 }
 
 .back-btn:hover {
