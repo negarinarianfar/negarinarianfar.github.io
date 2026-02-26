@@ -102,8 +102,11 @@ h1{margin:0 0 14px;font-size:46px;line-height:1.08}
 .mini-row{display:flex;gap:10px;align-items:center;color:var(--muted);margin:8px 0}
 .dot{width:8px;height:8px;border-radius:999px;background:var(--blue);display:inline-block}
 
-.section{padding:54px 0 0}
-.section.alt{padding:54px 0;background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06); margin-top:10px;}
+.section{padding:80px 0}
+.section.alt{padding:80px 0;background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);}
+.section + .section{
+  margin-top:20px;
+}
 .section-head{margin-bottom:16px}
 .section-head h2{margin:0 0 6px;font-size:30px}
 .section-head p{margin:0;color:var(--muted)}
