@@ -1,7 +1,160 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Coming Soon</title></head>
-<body style="font-family:system-ui; padding:40px;">
-<h1>Coming soon</h1>
-<p>This demo will be added soon.</p>
-<a href="/web-projects/">Back to Web Projects</a>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alex Morgan | Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/web-projects/">← Web Projects</a>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="badge">Data Scientist • ML Engineer</p>
+        <h1>Building practical AI products and clean technical interfaces.</h1>
+        <p class="lead">
+          I work on ML systems, reinforcement learning experiments, and lightweight web demos to communicate results clearly.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#" aria-label="Download CV">Download CV</a>
+        </div>
+
+        <div class="links">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Google Scholar">Scholar</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Projects shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">RL</span>
+          <span class="stat-label">Research focus</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Fast</span>
+          <span class="stat-label">Clean delivery</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <p>Short, outcome-focused summaries with links to code and demos.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>MiniChess-RL</h3>
+          <p>Q-learning agent trained to play MiniChess. Includes evaluation against random opponent and training logs.</p>
+          <div class="meta">
+            <span class="pill">Python</span><span class="pill">RL</span><span class="pill">Q-learning</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="#">Live Demo</a>
+            <a class="link" href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>DQN CartPole</h3>
+          <p>Deep Q-Network baseline with replay buffer, target network, and learning curves.</p>
+          <div class="meta">
+            <span class="pill">PyTorch</span><span class="pill">DQN</span><span class="pill">Gym</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="#">Report</a>
+            <a class="link" href="#">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Technical Website Template</h3>
+          <p>Minimal portfolio template optimized for readability and quick deployment on GitHub Pages.</p>
+          <div class="meta">
+            <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">Responsive</span>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="/web-projects/">Gallery</a>
+            <a class="link" href="#">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Tools I use for ML research and production-minded prototypes.</p>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Machine Learning</h3>
+          <p>Deep learning, reinforcement learning, evaluation, experiment tracking.</p>
+          <div class="meta">
+            <span class="pill">PyTorch</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Engineering</h3>
+          <p>Clean code, reproducible setups, lightweight web interfaces for demos.</p>
+          <div class="meta">
+            <span class="pill">Python</span><span class="pill">Git</span><span class="pill">HTML/CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Short, credible, and aligned with AI/RL.</p>
+      </div>
+
+      <div class="card about">
+        <p>
+          I’m an AI researcher focused on reinforcement learning and decision-making. I enjoy building minimal, high-signal
+          portfolios and demo pages that make technical work easy to understand.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>For collaborations or a custom portfolio/academic website.</p>
+      </div>
+
+      <div class="card contact">
+        <a class="btn primary" href="mailto:email@example.com">Email me</a>
+        <a class="btn ghost" href="#">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Alex Morgan. Built with HTML/CSS. Deployed on GitHub Pages.</p>
+    </footer>
+  </main>
+</body>
+</html>
