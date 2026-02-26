@@ -3,13 +3,29 @@ body {
   background-color: #f9fafb;
   color: #1f2937;
   line-height: 1.7;
+   margin: 0;
+  padding: 0;
 }
 
+/* Fix: prevent content from sticking to edges */
+html, body {
+  width: 100%;
+}
+
+/* Center + horizontal padding */
 .container {
-  width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .hero {
