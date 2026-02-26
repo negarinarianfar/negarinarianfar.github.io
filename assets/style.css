@@ -281,3 +281,7 @@ box-shadow: 0 0 40px rgba(0,140,255,0.15),
   opacity: 1;
   text-decoration: underline;
 }
+.training-curve {
+  padding-left: 9px;
+  margin-top:10px;
+}
